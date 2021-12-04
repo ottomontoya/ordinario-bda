@@ -65,7 +65,7 @@ class Principal:
 if __name__ == "__main__":
     # Conect to the Atlas UI Cluster
     client = pymongo.MongoClient("XXX")
-    db = client.bda
+    db = XXX
     # Calling Methods
     m = Principal()
     # m.generateMononomiosDB()
