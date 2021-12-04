@@ -7,9 +7,8 @@ class Filters:
 
     def ExpGte650(self):
         # Conect to the Atlas UI Cluster
-        client = pymongo.MongoClient(
-            "mongodb+srv://analytics:analytics-password@mflix.wti8n.mongodb.net/myFirstDatabase?ssl=true&ssl_cert_reqs=CERT_NONE")
-        db = client.bda.algebraTest
+        client = pymongo.MongoClient("XXX")
+        db = XXX
         # Query 1 - Todos los monomios y polinomios que tengan un exponnete mayor a 650,
 
         # Query
@@ -28,9 +27,8 @@ class Filters:
 
     def PoliCoefGte100Lte400(self):
         # Conect to the Atlas UI Cluster
-        client = pymongo.MongoClient(
-            "mongodb+srv://analytics:analytics-password@mflix.wti8n.mongodb.net/myFirstDatabase?ssl=true&ssl_cert_reqs=CERT_NONE")
-        db = client.bda.algebraTest
+        client = pymongo.MongoClient("XXX")
+        db = XXX
         # Query 1 - Todos los monomios y polinomios que tengan un exponnete mayor a 650,
 
         # Query
