@@ -2,24 +2,26 @@ from pymongo import results
 from Monomio import Monomio
 from random import randint, uniform
 
+# TODO:
+# prop grado
+# finish agregar
+# meth obtener (check guia)
 
 class Polinomio:
 
-    # Constructor instance
     def __init__(self):
         self.__monomios = []
         self.__monomios.append(Monomio())
 
-    # Set doc property
     @property
-    def doc(self):
+    def to_database(self):
         dict = {}
         dict['type'] = "Polinomio"
-        dict['monomios'] = [m.doc for m in self.__monomios]
+        dict['monomios'] = [m.to_database for m in self.__monomios]
         return dict
 
-    # Add a monomium to the array
-    def add(self, monomio):
+    # FALTA GARANTIZAR LO DE QUE SOLO HAYA UN POLINOMIO CON CADA EXPONENTE
+    def agregar(self, monomio):
         self.__monomios.append(monomio)
 
     # Evaluate in regresion forms within the array list
@@ -36,7 +38,7 @@ class Polinomio:
         for i in range(NumPoli):
             coef = uniform(-1000, 1000)
             exp = randint(0, 500)
-            p.add(Monomio(coef, exp))
+            p.agregar(Monomio(coef, exp))
         NumPoli = 0
         return p
 

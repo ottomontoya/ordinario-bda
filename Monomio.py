@@ -1,3 +1,5 @@
+# TODO: meth sumar y restar (check guia)
+
 class Monomio:
 
     # Constructor
@@ -14,7 +16,7 @@ class Monomio:
         return self.__exponente
 
     @property
-    def doc(self):
+    def to_database(self):
         dict = {}
         dict['type'] = "Monomio"
         dict['coeficiente'] = self.__coeficiente

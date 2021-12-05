@@ -23,7 +23,7 @@ class Principal:
         # Insertar en la base de de datos (monomios)
         for monomio in monomiosL:
             bypass_validation = False
-            db.algebraTest.insert_one(monomio.doc, bypass_validation)
+            db.algebraTest.insert_one(monomio.to_database, bypass_validation)
         print("Insercion de Monomios correcta")
 
     # Metodo para generar 100 polinomios (documentos)
@@ -35,8 +35,8 @@ class Principal:
             for j in range(NumPoli):
                 coef = uniform(-1000, 1000)
                 exp = randint(0, 5000)
-                p.add(Monomio(coef, exp))
-            db.algebraTest.insert_one(p.doc)
+                p.agregar(Monomio(coef, exp))
+            db.XXX.insert_one(p.to_database)
             NumPoli = 0
         # Mensaje de confirmacion en consola
         print("Insercion de Polinomios correcta")
@@ -48,7 +48,7 @@ class Principal:
             e = Expresiones()
             value = randint(2, 4)
             e.evaluacion(value)
-            db.algebraTest.insert_one(e.doc)
+            db.XXX.insert_one(e.to_database)
             value = 0
         # Mensaje de confirmacion en consola
         print("Insercion de Expresiones correcta")

@@ -1,26 +1,39 @@
 from Polinomios import Polinomio
 from random import randint, uniform
 
+# TODO: please check
+# operation methods needed?
+# evaluacion needed?
 
 class Expresiones:
 
-    # Constructor instance
-    def __init__(self, operador1=None, operador2=None):
-        if(operador1 == None):
+    def __init__(self, operando1 = None, operando2 = None):
+        self.__operando1 = operando1
+        self.__operando2 = operando2
+
+        if operando1 is None:
             self.__operador1 = Polinomio().generatePoli()
-        if(operador2 == None):
+        if operando2 is None:
             self.__operador2 = Polinomio().generatePoli()
+
         self.__operacion = ""
         self.__resultado = ""
 
-    # Set doc property
     @property
-    def doc(self):
+    def operando1(self):
+        return self.__operando1
+
+    @property
+    def operando2(self):
+        return self.__operando2
+
+    @property
+    def to_database(self):
         dict = {}
         dict['type'] = "Expresion"
         dict['operacion'] = self.__operacion
-        dict['operador1'] = self.__operador1.doc
-        dict['operador2'] = self.__operador2.doc
+        dict['operando1'] = self.__operando1.doc
+        dict['operando2'] = self.__operando2.doc
         dict['resultado'] = self.__resultado
         return dict
 
@@ -39,8 +52,8 @@ class Expresiones:
 
     # Evaluate and set values for the polinoms
     def evaluacion(self, valor):
-        Poly1 = self.__operador1.evaluar(valor)
-        Poly2 = self.__operador2.evaluar(valor)
+        Poly1 = self.__operando1.evaluar(valor)
+        Poly2 = self.__operando2.evaluar(valor)
         op = randint(1, 4)
         if(op == 1):
             self.__operacion = "suma"
