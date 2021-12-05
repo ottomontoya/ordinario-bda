@@ -32,8 +32,8 @@ class Expresiones:
         dict = {}
         dict['type'] = "Expresion"
         dict['operacion'] = self.__operacion
-        dict['operando1'] = self.__operando1.doc
-        dict['operando2'] = self.__operando2.doc
+        dict['operando1'] = self.__operando1.to_database
+        dict['operando2'] = self.__operando2.to_database
         dict['resultado'] = self.__resultado
         return dict
 
