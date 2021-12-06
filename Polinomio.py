@@ -29,6 +29,8 @@ class Polinomio:
     def to_database(self):
         obj = dict()
         obj['type'] = "Polinomio"
+        obj['grado'] = self.grado
+        obj['length'] = len(self.monomios)
         obj['monomios'] = [m.to_database for m in self.__monomios]
         return obj
 
