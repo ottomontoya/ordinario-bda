@@ -36,6 +36,7 @@ class Expresion:
     @property
     def to_database(self):
         obj = dict()
+        obj['type'] = 'Expresion'
         obj['operacion'] = self.__operador
         obj['operando1'] = self.__operando1.to_database
         obj['operando2'] = self.__operando2.to_database
