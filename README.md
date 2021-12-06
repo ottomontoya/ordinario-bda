@@ -3,5 +3,5 @@
 
 ### Integrantes:
 - Otto Montoya *00363727*
-- Alejandro Ortega *ID*
+- Alejandro Ortega *00379649*
 - Alan Sesin *00354760*

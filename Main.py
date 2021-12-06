@@ -8,6 +8,7 @@ import pymongo
 import pprint
 import bson.objectid
 
+# NOTE: Por qué una clase principal????
 
 class Principal:
 
