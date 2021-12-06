@@ -3,13 +3,13 @@ source bda_env/bin/activate
 # Preparar BD
 python init.py
 echo 'Base de datos preparada'
-# Clase y generación de monomios
+# Generación de monomios
 python monomios.py
 echo 'Monomios insertados'
-# Clase y generación de polinomios
+# Generación de polinomios
 python polinomios.py
 echo 'Polinomios insertados'
-# Clase y generación de expresiones
+# Generación de expresiones
 python expresiones.py
 echo 'Expresiones insertados'
 # TODO: Poner los scripts que queden por correr acá
